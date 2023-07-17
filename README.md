@@ -1,3 +1,8 @@
+## Project summary
+
+This is a test project created using Next.js for frontend and Node.js for backend.
+Basically it's an app that import products from a csv and write it in a sql based database.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
