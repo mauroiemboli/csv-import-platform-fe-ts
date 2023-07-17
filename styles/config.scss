@@ -1,0 +1,63 @@
+/*                      COLORS
+------------------------------------------------------------------------- */
+$color-primary: #26125d;
+$color-accent: #ff0054;
+$color-accent-light: #ff00555a;
+$color-accent-lightest: #ff005508;
+$color-icon: #fdfeff;
+$color-white: #fdfeff;
+$color-bg: #fdfeff;
+$color-bg-accent: #ff00555a;
+$color-bodybg: #fdfeff;
+$color-text: #26125d;
+$navbar-height: 80px;
+$color-neutral: #fff8fb;
+
+/*                      TYPOGRAPHY
+------------------------------------------------------------------------- */
+$font: "Urbanist", sans-serif;
+
+$fontweight: 300;
+$fontweight-bold: 500;
+$fontweight-bolder: 1000;
+
+/*                      SIZES
+------------------------------------------------------------------------- */
+
+$layoutwidth: 87.5rem; // 1400px
+$articlewidth: 50em; // 800px
+$popupwidth: 35rem; // 560px
+
+$size-XXL: 90em; // 1440px
+$size-XL: 80em; // 1280px
+$size-L: 60em; // 960px
+$size-M: 50em; // 800px
+$size-S: 35em; // 560px
+$size-XS: 25em; // 400px
+
+$borderradius: 8px;
+$borderradius-S: 4px;
+$borderradius-XS: 2px;
+
+$statheight: 3.5rem;
+$smallselect-height: 2rem;
+
+/*                      DURATIONS
+------------------------------------------------------------------------- */
+
+$transition-rollover: 0.15s;
+$transition-slide: 0.3s;
+
+/*                      LAYERING
+------------------------------------------------------------------------- */
+
+$index-sticky: 5;
+$index-tooltip: 10;
+$index-banner: 900;
+$index-popup: 1000;
+
+/*                      BORDERS
+------------------------------------------------------------------------- */
+
+$tableborder: 2px solid $color-accent-light;
+$tdborder: 1px solid $color-accent-lightest;

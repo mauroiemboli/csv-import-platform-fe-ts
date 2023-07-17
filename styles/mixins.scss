@@ -1,0 +1,412 @@
+/*                      LAYOUT
+------------------------------a------------------------------------------- */
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin inlineflex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin flexWrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin flexRowWrap {
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+@mixin flexNoWrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+@mixin flexColumn {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+@mixin flexGrow($num) {
+  -webkit-flex-grow: $num;
+  flex-grow: $num;
+}
+
+@mixin flexNoShrink {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+@mixin flexShrink($num) {
+  -webkit-flex-shrink: $num;
+  flex-shrink: $num;
+}
+
+@mixin flexCenter {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@mixin flexLeft {
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+
+@mixin flexRight {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin flexTop {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flexMiddle {
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@mixin flexBottom {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+@mixin flexVerticalCenter {
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@mixin flexJustified {
+  -webkit-box-pack: space-between;
+  -moz-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+@mixin flexAlignStart {
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+}
+
+@mixin flexSpaceAround {
+  -webkit-box-pack: space-around;
+  -moz-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+@mixin flexbox($basis) {
+  -webkit-box-flex: 0 0 $basis;
+  -moz-box-flex: 0 0 $basis;
+  -webkit-flex: 0 0 $basis;
+  -ms-flex: 0 0 $basis;
+  flex: 0 0 $basis;
+}
+
+@mixin flexEqual {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+@mixin flexOrder($num) {
+  -webkit-order: $num;
+  order: $num;
+}
+
+@mixin flexAlignSelf($value) {
+  -webkit-align-self: $value;
+  align-self: $value;
+}
+
+@mixin flexBasis($value) {
+  -webkit-flex-basis: $value;
+  flex-basis: $value;
+}
+
+@mixin clearfix {
+  // For modern browsers
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  // For IE 6/7 (trigger hasLayout)
+  & {
+    *zoom: 1;
+  }
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    scroll-margin-right: 20px;
+    margin-top: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-alphabg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-alphabg;
+    border-radius: 6px;
+    border: 3px solid $color-bg-accent;
+    scroll-margin-right: 20px;
+    margin-right: 8px;
+    right: 8px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: #1d1f21;
+  }
+}
+
+/*                      FONTS AND TEXT
+  ------------------------------------------------------------------------- */
+
+@mixin resetButton {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin disableSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin wordwrap {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+@mixin selection($background, $color) {
+  ::-moz-selection {
+    background: $background;
+    color: $color;
+    text-shadow: none;
+  }
+  ::selection {
+    background: $background;
+    color: $color;
+    text-shadow: none;
+  }
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin removeEllipsis {
+  text-overflow: unset;
+  white-space: normal;
+  overflow: visible;
+}
+
+@mixin breakWords {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+@mixin noBreakWords {
+  overflow-wrap: normal;
+  word-wrap: normal;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+/*                      ICONS
+  ------------------------------------------------------------------------- */
+
+@mixin iconBackground {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/*                      FORMS
+  ------------------------------------------------------------------------- */
+
+@mixin placeHolder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin normaliseSelect() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto;
+}
+
+/*                      SHADOWS AND GLOWS
+  ------------------------------------------------------------------------- */
+
+@mixin boxShadow($x: 5px, $y: 5px, $blur: 10px, $spread: 10px, $color: #000) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin insetBoxShadow(
+  $x: 5px,
+  $y: 5px,
+  $blur: 10px,
+  $spread: 10px,
+  $color: #000
+) {
+  -webkit-box-shadow: inset $x $y $blur $spread $color;
+  -moz-box-shadow: inset $x $y $blur $spread $color;
+  box-shadow: inset $x $y $blur $spread $color;
+}
+
+@mixin noShadow() {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/*                      TRANSFORM
+  ------------------------------------------------------------------------- */
+
+@mixin scale($factor) {
+  -webkit-transform: scale($factor);
+  -moz-transform: scale($factor);
+  -ms-transform: scale($factor);
+  -o-transform: scale($factor);
+  transform: scale($factor);
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+  -moz-transform: translateX($x);
+  -ms-transform: translateX($x);
+  transform: translateX($x);
+}
+
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+  -moz-transform: translateY($y);
+  -ms-transform: translateY($y);
+  transform: translateY($y);
+}
+
+@mixin rotate($angle) {
+  -webkit-transform: rotate($angle * 1deg);
+  -moz-transform: rotate($angle * 1deg);
+  -ms-transform: rotate($angle * 1deg);
+  -o-transform: rotate($angle * 1deg);
+  transform: rotate($angle * 1deg);
+}
+
+@mixin transformOrigin($values) {
+  -webkit-transform-origin: $values;
+  -moz-transform-origin: $values;
+  -ms-transform-origin: $values;
+  -o-transform-origin: $values;
+  transform-origin: $values;
+}
+
+/*                      TRANSITIONS
+  ------------------------------------------------------------------------- */
+
+$default-ease: ease-out;
+
+@mixin transition($property, $duration, $ease: $default-ease) {
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: $property $duration $ease;
+  -o-transition: $property $duration $ease;
+  transition: $property $duration $ease;
+}
+
+@mixin transitionTwo($property1, $property2, $duration, $ease: $default-ease) {
+  -webkit-transition: $property1 $duration $ease, $property2 $duration $ease;
+  -moz-transition: $property1 $duration $ease, $property2 $duration $ease;
+  -o-transition: $property1 $duration $ease, $property2 $duration $ease;
+  transition: $property1 $duration $ease, $property2 $duration $ease;
+}
+
+@mixin transitionDelay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+/*                      ANIMATIONS
+  ------------------------------------------------------------------------- */
+
+@mixin animation($name, $duration) {
+  -webkit-animation: $name $duration infinite linear;
+  -moz-animation: $name $duration infinite linear;
+  -o-animation: $name $duration infinite linear;
+  animation: $name $duration infinite linear;
+}

@@ -1,0 +1,123 @@
+/*                      TEXT
+------------------------------------------------------------------------- */
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  color: $color-text;
+  font-weight: $fontweight;
+}
+
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  list-style: none;
+}
+
+p {
+  line-height: 1.4;
+
+  * + p {
+    margin-top: 0.5rem;
+  }
+
+  a {
+    text-decoration: underline;
+    @include transition(color, $transition-rollover);
+  }
+}
+
+strong {
+  font-weight: $fontweight-bold;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+sub,
+sup {
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@include selection(($color-accent-light), $color-text);
+
+body:not(.touch) {
+  p a:hover {
+    color: $color-accent-light;
+  }
+}
+
+/*                      TITLES
+  ------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: $fontweight-bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+  // @include ellipsis;
+
+  &.ellipsed {
+    @include ellipsis;
+  }
+
+  @media only screen and (max-width: $size-S) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.125em;
+}
+
+h5 {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1rem;
+  font-weight: $fontweight;
+}
+
+h6 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

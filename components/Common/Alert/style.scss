@@ -1,0 +1,24 @@
+.alert {
+  position: fixed;
+  top: 52px;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-bg;
+  &.opened {
+    transform: translateY(0);
+  }
+  &.closed {
+    transform: translateY(-220px);
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: center;
+    gap: 4px;
+    svg {
+      fill: #808080;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.animation {
+  &--error {
+    text-align: center !important;
+    .MuiSvgIcon-root {
+      fill: rgba(0, 0, 0, 0.08);
+    }
+  }
+  &--init {
+    cursor: pointer;
+  }
+}
+
+.error__card {
+  border-top: 8px solid !important;
+  border-color: #ff5555 !important;
+  min-height: 700px;
+  .button--back {
+    margin-top: 32px;
+    color: $color-text;
+    font-size: 15px;
+    svg {
+      fill: $color-text;
+    }
+  }
+}
+
+.empty__card {
+  border-top: 8px solid !important;
+  border-color: $color-primary !important;
+  min-height: 700px;
+  .button--back {
+    margin-top: 32px;
+    color: $color-text;
+    font-size: 15px;
+    svg {
+      fill: $color-text;
+    }
+  }
+}

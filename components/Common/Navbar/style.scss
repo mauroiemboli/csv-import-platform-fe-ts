@@ -1,0 +1,84 @@
+nav {
+  background-color: $color-bg;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1024;
+  .nav__content {
+    display: flex;
+    position: relative;
+    height: 80px;
+    padding-right: 1.5rem;
+    justify-content: space-between;
+    .separator {
+      background-color: $color-accent;
+      width: 2px;
+      height: 40px;
+    }
+    &--left {
+      width: 272px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        position: relative;
+        margin-top: -2px;
+        cursor: pointer;
+        margin-left: 1.5rem;
+      }
+      .separator {
+        margin-right: 40px;
+      }
+      .module {
+        text-transform: uppercase;
+        width: max-content;
+      }
+    }
+    &--right {
+      display: flex;
+      align-items: center;
+      .separator {
+        margin-left: 8px;
+      }
+      .menu-button {
+        border-radius: 4px;
+
+        .MuiAvatar-root {
+          background-color: $color-primary;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  &.module__show {
+    .nav__content {
+      .separator {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+      &--left {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: unset;
+        .module {
+          text-transform: uppercase;
+          width: max-content;
+          font-weight: 500;
+        }
+        .btn__switch__theme {
+          display: none;
+        }
+      }
+      &--right {
+        .btn__switch__theme {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}

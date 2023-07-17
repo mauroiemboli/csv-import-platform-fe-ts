@@ -1,0 +1,13 @@
+.home {
+  .data__content__header {
+    position: relative;
+    .input--search {
+      position: absolute;
+      top: 8px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      width: 220px;
+    }
+  }
+}

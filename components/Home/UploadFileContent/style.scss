@@ -1,0 +1,38 @@
+.upload__content {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  .fileName {
+    margin-top: -16px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    opacity: 0.8;
+    position: absolute;
+    top: 14px;
+    font-weight: 400;
+    .file {
+      display: flex;
+      align-items: center;
+      h5 {
+        margin-top: 1px;
+        font-size: 12px;
+        margin-left: 4px;
+        margin-right: 8px;
+        font-weight: 500;
+        opacity: 0.8;
+      }
+      .MuiSvgIcon-root {
+        fill: #10793f !important;
+        width: 0.8em;
+        height: 0.8em;
+      }
+    }
+    .MuiSvgIcon-root {
+      fill: var(--color-accent) !important;
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

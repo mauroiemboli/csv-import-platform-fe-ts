@@ -1,0 +1,71 @@
+.animation-fade-in-fast {
+  animation: keyframes-fade-in 0.1s ease-in;
+}
+
+.animation-fade-in {
+  animation: keyframes-fade-in 0.25s ease-in;
+}
+
+.animation-fade-in-slow {
+  animation: keyframes-fade-in 5s ease-in;
+}
+
+@keyframes keyframes-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin loadingAnimationBg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../public/images/ripple.svg");
+  background-size: 152px;
+}
+
+.loading-container {
+  height: 10rem;
+  background-size: 15rem;
+  @include loadingAnimationBg;
+
+  &.loading-container-small {
+    height: 1rem;
+    width: 2rem;
+    background-size: contain;
+    display: inline-block;
+  }
+}
+
+.loadingstate {
+  position: fixed;
+  z-index: 1021;
+  top: 0;
+  bottom: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.2s;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  @include loadingAnimationBg;
+
+  &.visible {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+}
+
+.pl-0 {
+  .loadingstate {
+    left: 0 !important;
+  }
+}
+
+.colorthemed.darkUI .loadingstate {
+  background-color: rgba(0, 0, 0, 0.8);
+}

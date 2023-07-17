@@ -1,0 +1,272 @@
+/*                      BODY
+------------------------------------------------------------------------- */
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body,
+html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  .page-wrapper {
+    display: flex;
+    min-height: 94vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+body,
+.darkUI {
+  text-align: center;
+  scroll-behavior: smooth;
+  background-color: $color-bodybg;
+
+  .colorthemed {
+    @include transition(background-color, $transition-rollover);
+
+    .tableheader,
+    th {
+      @include transition(background-color, $transition-rollover);
+    }
+  }
+}
+
+/*                      RESPONSIVE VISIBILITY
+------------------------------------------------------------------------- */
+
+.hidden {
+  display: none;
+}
+
+.hidden-L {
+  @media only screen and (max-width: $size-L) {
+    display: none !important;
+  }
+}
+
+.hidden-M {
+  @media only screen and (max-width: $size-M) {
+    display: none !important;
+  }
+}
+
+.hidden-S {
+  @media only screen and (max-width: $size-S) {
+    display: none !important;
+  }
+}
+
+.hidden-XS {
+  @media only screen and (max-width: $size-XS) {
+    display: none !important;
+  }
+}
+
+/*                      MAIN LAYOUT
+------------------------------------------------------------------------- */
+
+body {
+  @include flex;
+  @include flexColumn;
+  min-height: calc(100vh - 96px);
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-top: $navbar-height;
+}
+
+.main {
+  @include flexGrow(1);
+  position: relative;
+}
+
+.main-emptypage {
+  @include flex;
+  @include flexVerticalCenter;
+  height: 100vh;
+}
+
+.main-errorpage {
+  @include flex;
+  @include flexVerticalCenter;
+  min-height: 50vh;
+}
+
+.nav__content {
+  max-width: $layoutwidth;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  max-width: $layoutwidth;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+/*                      PAGE BLOCKS
+------------------------------------------------------------------------- */
+
+.d-none {
+  display: none !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.inlineb {
+  display: inline-block;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.maxw-100 {
+  max-width: 100px;
+}
+.maxw-150 {
+  max-width: 150px;
+}
+.maxw-200 {
+  max-width: 200px;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-1 {
+  margin-top: 4px;
+}
+
+.mt-2 {
+  margin-top: 8px !important;
+}
+
+.mt-3 {
+  margin-top: 16px !important;
+}
+
+.mt-4 {
+  margin-top: 24px !important;
+}
+
+.mt-5 {
+  margin-top: 32px !important;
+}
+
+.mt-6 {
+  margin-top: 40px;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.ml-1 {
+  margin-left: 4px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.ml-3 {
+  margin-left: 16px !important;
+}
+
+.ml-4 {
+  margin-left: 24px;
+}
+
+.ml-5 {
+  margin-left: 32px;
+}
+
+.ml-6 {
+  margin-left: 40px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: 4px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mb-3 {
+  margin-bottom: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 24px;
+}
+
+.mb-5 {
+  margin-bottom: 32px;
+}
+
+.mb-6 {
+  margin-bottom: 40px;
+}
+
+.break-w {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/*                      MISC
+------------------------------------------------------------------------- */
+.card {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 6px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+  transition: all 0.2s ease-out;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px, rgba(0, 0, 0, 0.15) 0px 6px 6px;
+  transition: all 0.2s ease-in;
+}
+.alert {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 6px, rgba(0, 0, 0, 0.12) 0px 3px 6px;
+  transition: all 0.2s ease-out;
+  padding: 16px;
+  border-radius: 12px;
+  z-index: 1040;
+}

@@ -1,0 +1,135 @@
+.operation--modal {
+  .modal {
+    text-align: center;
+    top: 8%;
+    width: fit-content !important;
+    padding: 0 !important;
+    padding-bottom: 16px !important;
+    overflow: hidden !important;
+    max-width: 396px;
+    background-color: white;
+
+    h4 {
+      font-size: 16px;
+      text-align: left;
+    }
+    .content__title {
+      &--remove {
+        background-color: rgb(255, 0, 37) !important;
+        padding: 8px;
+        color: white;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      &--error {
+        background-color: rgb(255, 0, 37) !important;
+        padding: 8px;
+        color: white;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      &--edit {
+        background-color: $color-accent !important;
+        padding: 8px;
+        color: white;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      &--loading {
+        background-color: $color-primary !important;
+        padding: 8px;
+        color: white;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      &--complete {
+        background-color: rgb(29, 181, 16);
+        padding: 8px;
+        color: white;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+    }
+    .content__body {
+      padding: 0 16px;
+      &.complete {
+        min-width: 224px;
+        text-align: left;
+      }
+      &.loading {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        min-width: 240px;
+        .MuiBox-root {
+          margin-top: 16px;
+          height: 60px;
+          .MuiTypography-root {
+            position: absolute !important;
+            top: -4px !important;
+          }
+          .MuiCircularProgress-root {
+            width: 40px;
+            height: 40px;
+            transform: rotate(-90deg);
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+          }
+        }
+        span {
+          text-align: center;
+        }
+      }
+    }
+    .content__body.recover {
+      text-align: left;
+    }
+    .content__title--edit {
+      background-color: $color-accent !important;
+      padding: 8px;
+      color: white;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+    span {
+      text-align: left;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .edit__anim {
+    margin: 12px 12px !important;
+  }
+
+  .loading__anim {
+    margin: 16px !important;
+  }
+
+  .button__content {
+    display: flex;
+    padding-top: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 0;
+    padding-top: 12px;
+    padding-bottom: 0 !important;
+    .MuiButton-outlined {
+      color: $color-accent !important;
+      border-color: $color-accent !important;
+    }
+    gap: 8px;
+    &.remove {
+      .btn__action {
+        background-color: rgb(255, 0, 37) !important;
+      }
+    }
+    &.edit {
+      .btn__action {
+        background-color: $color-accent !important;
+      }
+    }
+  }
+}

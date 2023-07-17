@@ -1,0 +1,12 @@
+footer {
+  background-color: $color-primary;
+  .content {
+    text-align: right !important;
+  }
+  p {
+    padding: 0.5rem !important;
+    padding-right: 0 !important;
+    color: $color-white;
+    font-size: 0.8em !important;
+  }
+}

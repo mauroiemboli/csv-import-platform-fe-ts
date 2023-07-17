@@ -1,0 +1,48 @@
+.MuiSvgIcon-root {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.MuiButton-contained {
+  .MuiSvgIcon-root {
+    fill: #ffff !important;
+    width: 1.2em;
+    height: 1.2em;
+  }
+}
+
+.MuiTableCell-root {
+  text-align: left !important;
+}
+
+.MuiLoadingButton-loadingIndicator {
+  color: white !important;
+}
+
+.MuiAlertTitle-root {
+  text-align: left !important;
+}
+
+.Mui-disabled {
+  .MuiSvgIcon-root {
+    opacity: 0.4 !important;
+  }
+}
+
+.MuiButtonBase-root {
+  text-transform: inherit !important;
+  max-height: 40px !important;
+}
+
+.MuiButton-contained {
+  background-color: $color-primary !important;
+}
+
+.MuiButton-outlined {
+  color: $color-primary !important;
+  border-color: $color-primary !important;
+}
+
+.MuiPagination-root {
+  z-index: 1020;
+}
